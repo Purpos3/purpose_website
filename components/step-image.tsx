@@ -1,27 +1,28 @@
-'use client'
+// step-image.tsx
+'use client';
 
-import { basePath } from '@/next.config.mjs'
-import ExportedImage from 'next-image-export-optimizer'
-import { StaticImageData } from 'next/image'
+import { basePath } from '@/next.config.mjs';
+import ExportedImage from 'next-image-export-optimizer';
+import { StaticImageData } from 'next/image';
 
 interface Props {
-  imageSrc: StaticImageData
-  active: boolean
+  imageSrc: StaticImageData | string;
+  active: boolean;
 }
 
 export default function StepImage({ imageSrc, active }: Props) {
   if (!active) {
-    return null
+    return null;
   }
 
   return (
-    <div className="flex flex-row gap-3 justify-center items-center relative w-full h-full">
+    <div className="flex justify-center items-center w-[250px] h-[500px]"> {/* Slightly larger dimensions */}
       <ExportedImage
         src={imageSrc}
-        alt="Success"
-        className="object-contain"
+        alt="Step Image"
+        className="object-contain w-full h-full"
         basePath={basePath}
       />
     </div>
-  )
+  );
 }
