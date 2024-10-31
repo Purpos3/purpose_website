@@ -3,8 +3,8 @@
 
 import { gradientStyle } from '@/lib/contants';
 import step1 from '@/public/images/steps/step11.png';
-import step2 from '@/public/images/steps/step2.gif';
-import step3 from '@/public/images/steps/step3.gif';
+import step2 from '@/public/images/steps/step22.png';
+import step3 from '@/public/images/steps/step33.png';
 import { useState } from 'react';
 import Step from './step';
 import StepImage from './step-image';
