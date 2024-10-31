@@ -26,7 +26,7 @@ jobs:
       - name: Setup Node.js ⚙️ - Cache dependencies ⚡ - Install dependencies 🔧
         uses: actions/setup-node@v3
         with:
-          node-version: '18.12.0' # Updated to meet Yarn's requirements
+          node-version: '18.17.0' # Updated to meet Next.js requirements
 
       - name: Install Dependencies 🔧
         run: yarn install
