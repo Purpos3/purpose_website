@@ -6,7 +6,7 @@ import ExportedImage from 'next-image-export-optimizer';
 import { StaticImageData } from 'next/image';
 
 interface Props {
-  imageSrc: StaticImageData | string;
+  imageSrc: StaticImageData | string; // Allow both StaticImageData and string
   active: boolean;
 }
 
@@ -16,7 +16,7 @@ export default function StepImage({ imageSrc, active }: Props) {
   }
 
   return (
-    <div className="flex justify-center items-center w-[250px] h-[500px]"> {/* Slightly larger dimensions */}
+    <div className="flex justify-center items-center w-[250px] h-[500px]"> {/* Adjusted container size */}
       <ExportedImage
         src={imageSrc}
         alt="Step Image"

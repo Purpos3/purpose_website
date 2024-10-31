@@ -3,21 +3,22 @@
 
 import { gradientStyle } from '@/lib/contants';
 import step1 from '@/public/images/steps/step11.png';
-import step2 from '@/public/images/steps/step22.png';
-import step3 from '@/public/images/steps/step33.png';
+import step2 from '@/public/images/steps/step2.gif';
+import step3 from '@/public/images/steps/step3.gif';
 import { useState } from 'react';
 import Step from './step';
 import StepImage from './step-image';
+import { StaticImageData } from 'next/image';
 
-// Define types for the steps and images
-type StepType = {
-    num: string;
-    content: string;
+// Define the type to accept both StaticImageData and string
+type StepImageType = {
+  num: string;
+  imageSrc: StaticImageData | string;
 };
 
-type StepImageType = {
-    num: string;
-    imageSrc: string;
+type StepType = {
+  num: string;
+  content: string;
 };
 
 // Define the data for steps and images
